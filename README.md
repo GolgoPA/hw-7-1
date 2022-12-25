@@ -13,24 +13,24 @@
 4.Проверьте доступность хостов с помощью модуля ping.
 Приложите скриншоты действий.
 1. Установите Ansible. 
-vagrant up 3-х хостов  из этого [Vagrantfile](/Vagrantfile)
-на host0 ставил ansible, host1 и host2 - управляемые.
-![t2-1](/scrshts/t2-1.png)
+* vagrant up 3-х хостов  из этого [Vagrantfile](/Vagrantfile)
+* на host0 ставил ansible, host1 и host2 - управляемые.
+* ![t2-1](/scrshts/t2-1.png)
 2. Настройте управляемые машины (виртуальные или физические, не менее двух).
-На каждом хосте sudo nano /etc/ssh/sshd_config :
-![t2-2](/scrshts/t2-2.png)
-и sudo service ssh restart .
-На host0: ssh-copy-id vagrant@192.168.33.11; ssh-copy-id vagrant@192.168.33.12
+* На каждом хосте sudo nano /etc/ssh/sshd_config :
+* ![t2-2](/scrshts/t2-2.png)
+* и sudo service ssh restart .
+* На host0: ssh-copy-id vagrant@192.168.33.11; ssh-copy-id vagrant@192.168.33.12
 3. Создайте файл инвентори. Предлагается использовать файл, размещенный в папке с проектом, а не файл инвентори по умолчанию
-На host0: sudo cp /etc/ansible/ansible.cfg ~/test/ansible.cfg; sudo nano ~/test/ansible.cfg :
-![t2-3](/scrshts/t2-3.png)
-и nano ~/test/hosts : 
-![t2-4](/scrshts/t2-4.png)
+* На host0: sudo cp /etc/ansible/ansible.cfg ~/test/ansible.cfg; sudo nano ~/test/ansible.cfg :
+* ![t2-3](/scrshts/t2-3.png)
+* и nano ~/test/hosts : 
+* ![t2-4](/scrshts/t2-4.png)
 4. Проверьте доступность хостов с помощью модуля ping.
-![t2-5](/scrshts/t2-5.png)
-На host1 и host2: sudo apt update; sudo apt install python-pip 
-С host0: 
-![t2-6](/scrshts/t2-6.png)
+* ![t2-5](/scrshts/t2-5.png)
+* На host1 и host2: sudo apt update; sudo apt install python-pip 
+* С host0: 
+* ![t2-6](/scrshts/t2-6.png)
 ## Задание 3
 Какая разница между параметрами forks и serial?
 Приведите ответ в свободной форме.
